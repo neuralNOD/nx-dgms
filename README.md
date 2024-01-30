@@ -26,6 +26,8 @@ A collection of master tables which is independent of any project/product and ge
 * **`tbl`** represents a transactional table, and 
 * Certain table will use the prefix **`key`** which represents a collection of *primary key* and its description referenced primarily by the transactional table.
 
+The table names are defined in [*camelCase*](https://en.wikipedia.org/wiki/Camel_case), while the feature are named in [*PascalCase*](https://www.theserverside.com/definition/Pascal-case). Some fields/features are named in [*snake_case*](https://en.wikipedia.org/wiki/Snake_case) with a leading `_` which represents the column is not intended for the end-users but for the developers.
+
 The following **modules**, and their tables are primarily defined under the `dbo` schema:
 
 * **World DB**: A collection of countries, states, and cities along with various informations sourced from [OSS Database](https://countrystatecity.in/).
