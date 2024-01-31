@@ -21,7 +21,7 @@ A *top*-level schema that contains specifications for all the projects, records,
 
 ### Master Data Management Schema: *`dbo`*
 
-A collection of master tables which is independent of any project/product and generally has one/multiple keys that are referenced by any transactional table. The `dbo` and all dependent/independent child schema uses the *table prefix terminology* of:
+A collection of master/transactional tables which is independent of any project/product and generally has one/multiple keys that are referenced by any transactional table. The `dbo` and all dependent/independent child schema uses the *table prefix terminology* of:
 * **`mw`** to represent master table, while the prefix,
 * **`tbl`** represents a transactional table, and 
 * Certain table will use the prefix **`key`** which represents a collection of *primary key* and its description referenced primarily by the transactional table.
