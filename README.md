@@ -31,5 +31,15 @@ The table names are defined in [*camelCase*](https://en.wikipedia.org/wiki/Camel
 The following **modules**, and their tables are primarily defined under the `dbo` schema:
 
 * **World DB**: A collection of countries, states, and cities along with various informations sourced from [OSS Database](https://countrystatecity.in/).
+* **Currencies Master**: A set of table that holds information regarding the currency used/adopted by each country and their details (*under development*).
+* **Exchange Rates**: A table with primary key as the date holds the exchange rates between of all the available world currencies (check `mwCurrencies` for currency code detail) on the specified date.
+
+### Developer Usage Schema: *`dev`*
+
+A specifically designed schema that contains tables, views, stored procedures and/or functions useful for develpment purpose. Since developed for developers, as per previous convention [*snake_case*](https://en.wikipedia.org/wiki/Snake_case) is used and maintained throughout. The following informations are available under the `dev` schema (todo: documentation):
+
+#### Stored Procedure(s)
+
+1. **`dev.missing_exch_rate_days()`**
 
 </div>
