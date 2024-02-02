@@ -8,7 +8,9 @@ can be a drawback when linking tables for different projects. The problem is add
 creates a dependency to use backticks (<code>`</code>) on table names, but helps to manage and organize data. The following schema structure is being
 enforced, and a commit is rejected if it does not adhere to it. To set up activities to register a new schema, and define its use cases.
 
-## TOP-Level Schema: *`meta`*
+(TODO: Check the documentation/README.md for each specific [schema](./schema/) in their respective subdirectories.)
+
+## TOP-Level Schema: [*`meta`*](./schema/meta/README.md)
 
 A *top*-level schema that contains specifications for all the projects, records, etc. The tables are generally defined for information purposes, and
 there is no need for a query operation for you. The tables are typically for one-time insert (during setup); thus, there are no *Created On* or
@@ -45,7 +47,7 @@ The following **modules**, and their tables are primarily defined under the `dbo
 * **Exchange Rates**: A table with primary key as the date holds the exchange rates between of all the available world currencies (check `mwCurrencies` for
 currency code detail) on the specified date.
 
-## Developer Usage Schema: *`dev`*
+## Developer Usage Schema: [*`dev`*](./schema/dev/README.md)
 
 A specifically designed schema that contains tables, views, stored procedures and/or functions useful for develpment purpose. Since developed for
 developers, as per previous convention [*snake_case*](https://en.wikipedia.org/wiki/Snake_case) is used and maintained throughout. The following
