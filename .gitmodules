@@ -4,3 +4,6 @@
 [submodule "modules/ExchangeRatesAPIWrapper"]
 	path = modules/ExchangeRatesAPIWrapper
 	url = https://gist.github.com/nxlogics/0f5ada88a55cc316ffd542b8651626f9.git
+[submodule "schema/apps/lumos"]
+	path = schema/apps/lumos
+	url = https://github.com/neuralNOD/lumos.git
