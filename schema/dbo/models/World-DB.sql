@@ -19,3 +19,21 @@ CREATE TABLE `dbo.mwCountries` (
 
     CONSTRAINT `fk_currency_code` FOREIGN KEY (CurrencyCode) REFERENCES `dbo.mwCurrencies`(CurrencyID)
 );
+
+
+CREATE TABLE `dbo.mwStates` (
+    StateID VARCHAR(5) PRIMARY KEY,
+
+    StateName VARCHAR(56) NOT NULL,
+    StateCode VARCHAR(16) NULL COMMENT 'A code assigned by country/region which may/maynot be globally unique.',
+
+    StateType VARCHAR(32) DEFAULT NULL,
+    CountryID VARCHAR(3) NOT NULL,
+
+    StateLatitude  DECIMAL(10, 6) NOT NULL,
+    StateLongitude DECIMAL(10, 6) NOT NULL,
+
+    UNIQUE KEY `ck_state_name` (CountryID, StateName) COMMENT 'A country should have unique state names, globally may repeat.',
+    UNIQUE KEY `ck_state_code` (CountryID, StateCode) COMMENT 'A country should have one single state code, but globally may repeat.',
+    CONSTRAINT `fk_country_id` FOREIGN KEY (CountryID) REFERENCES `dbo.mwCountries`(CountryID)
+);
