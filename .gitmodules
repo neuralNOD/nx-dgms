@@ -7,3 +7,6 @@
 [submodule "schema/apps/lumos"]
 	path = schema/apps/lumos
 	url = https://github.com/neuralNOD/lumos.git
+[submodule "schema/apps/aberto"]
+	path = schema/apps/aberto
+	url = https://github.com/neuralNOD/aberto.git
