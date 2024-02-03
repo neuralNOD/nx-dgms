@@ -24,6 +24,7 @@ BEGIN
         , DATEDIFF(next_available_day, last_available_day) - 1 AS num_missing_days
     FROM
     (
+        (
         SELECT
         -- ! on sorted (ASC) date colum, lag of `+1` is used, thus
         -- ? original/date feature is always the next day, however since the
@@ -32,6 +33,16 @@ BEGIN
             LAG(EffectiveDate, 1, NULL) OVER(ORDER BY EffectiveDate) AS last_available_day
             , EffectiveDate AS next_available_day
         FROM `dbo.tblExchangeRate`
+        )
+        UNION ALL
+        (
+        SELECT
+        -- ! Also, return the number of days of data missing from the last and current date
+        -- the last available date is the max date available in the database
+            MAX(EffectiveDate) AS last_available_day
+            , CURRENT_DATE() AS next_available_day
+        FROM `dbo.tblExchangeRate`
+        )
     ) AS tbl
     WHERE DATEDIFF(next_available_day, last_available_day) != 1;
 END &&
