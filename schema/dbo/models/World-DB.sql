@@ -37,3 +37,19 @@ CREATE TABLE `dbo.mwStates` (
     UNIQUE KEY `ck_state_code` (CountryID, StateCode) COMMENT 'A country should have one single state code, but globally may repeat.',
     CONSTRAINT `fk_country_id` FOREIGN KEY (CountryID) REFERENCES `dbo.mwCountries`(CountryID)
 );
+
+
+CREATE TABLE `dbo.mwCities` (
+    CityUUID VARCHAR(36) PRIMARY KEY,
+    CityName VARCHAR(72) NOT NULL,
+
+    StateID VARCHAR(5) NOT NULL,
+
+    CityLatitude  DECIMAL(10, 6) NOT NULL,
+    CityLongitude DECIMAL(10, 6) NOT NULL,
+
+    _get_weather_date TINYINT NOT NULL DEFAULT FALSE COMMENT 'Developer usage, flag denotes if weather data is to be pulled/available.',
+
+    UNIQUE KEY `ck_city_name` (StateID, CityName),
+    CONSTRAINT `fk_state_id` FOREIGN KEY (StateID) REFERENCES `dbo.mwStates`(StateID)
+);
