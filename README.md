@@ -57,9 +57,16 @@ informations are available under the `dev` schema (todo: documentation):
 
 1. **`dev.missing_exch_rate_days()`**
 
-## Pre-Staging/Testing Environment: **`prestg`** and **`test`**
+## Pre-Staging/Testing Environment: *`prestg`* and *`test`*
 
 A schema developed within the production environment for testing and/or experimentations with the tables. The `prestg` tables can be specifically
 used for data pre-stages which might be setup at a later point in future.
+
+## Reserved Application Schema: **_`apps`_**
+
+The database is being designed to facilitate auto-scaling and room for inclusions of n-apps/products and thus the reserved schema `apps` which
+seperates the data tables related/specific to one single product. Check the [_documentations_](./schema/app/README.md) for more informaiton. The
+applications are stored with the naming convention `apps.<product/project-acronym>.<table-name>` thus follows a *two-level* schema as opposed to the
+single level schema as above.
 
 </div>
