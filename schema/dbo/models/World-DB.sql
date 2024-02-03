@@ -13,7 +13,7 @@ CREATE TABLE `dbo.mwCountries` (
     CountryID   VARCHAR(3) PRIMARY KEY COMMENT 'ISO-3 Code is considered as the primary key in the database.',
     CountryName VARCHAR(64) UNIQUE NOT NULL COMMENT 'The name of the country, which must be unique throught the database.',
 
-    CountryCapital VARCHAR(72) NULL COMMENT 'With the only exception for Antartica, all the countries have a capital.',
+    CountryCapital VARCHAR(72) NULL COMMENT 'With the only exception for Antartica and some island countries, all the countries have a capital.',
     CurrencyCode   VARCHAR(3) NOT NULL COMMENT 'The 3 digit ISO-4217 code of the most popular and widely used currency of the country.',
     TLDCode        VARCHAR(3) NOT NULL COMMENT 'The top level domain code of the country.',
 
