@@ -10,7 +10,7 @@ enforced, and a commit is rejected if it does not adhere to it. To set up activi
 
 (TODO: Check the documentation/README.md for each specific [schema](./schema/) in their respective subdirectories.)
 
-## TOP-Level Schema: [*`meta`*](./schema/meta/README.md)
+## TOP-Level Schema: *`meta`*
 
 A *top*-level schema that contains specifications for all the projects, records, etc. The tables are generally defined for information purposes, and
 there is no need for a query operation for you. The tables are typically for one-time insert (during setup); thus, there are no *Created On* or
@@ -47,7 +47,7 @@ The following **modules**, and their tables are primarily defined under the `dbo
 * **Exchange Rates**: A table with primary key as the date holds the exchange rates between of all the available world currencies (check `mwCurrencies` for
 currency code detail) on the specified date.
 
-## Developer Usage Schema: [*`dev`*](./schema/dev/README.md)
+## Developer Usage Schema: *`dev`*
 
 A specifically designed schema that contains tables, views, stored procedures and/or functions useful for develpment purpose. Since developed for
 developers, as per previous convention [*snake_case*](https://en.wikipedia.org/wiki/Snake_case) is used and maintained throughout. The following
@@ -57,6 +57,9 @@ informations are available under the `dev` schema (todo: documentation):
 
 1. **`dev.missing_exch_rate_days()`**
 
-### Pre-Staging/Testing Environment: **`prestg`** and **`test`**
+## Pre-Staging/Testing Environment: **`prestg`** and **`test`**
+
+A schema developed within the production environment for testing and/or experimentations with the tables. The `prestg` tables can be specifically
+used for data pre-stages which might be setup at a later point in future.
 
 </div>
