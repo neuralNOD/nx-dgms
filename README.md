@@ -65,7 +65,7 @@ used for data pre-stages which might be setup at a later point in future.
 ## Reserved Application Schema: **_`apps`_**
 
 The database is being designed to facilitate auto-scaling and room for inclusions of n-apps/products and thus the reserved schema `apps` which
-seperates the data tables related/specific to one single product. Check the [_documentations_](./schema/app/README.md) for more informaiton. The
+seperates the data tables related/specific to one single product. Check the [_documentations_](./schema/apps/README.md) for more informaiton. The
 applications are stored with the naming convention `apps.<product/project-acronym>.<table-name>` thus follows a *two-level* schema as opposed to the
 single level schema as above.
 
