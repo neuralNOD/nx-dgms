@@ -50,8 +50,10 @@ currency code detail) on the specified date.
 ## Developer Usage Schema: *`dev`*
 
 A specifically designed schema that contains tables, views, stored procedures and/or functions useful for develpment purpose. Since developed for
-developers, as per previous convention [*snake_case*](https://en.wikipedia.org/wiki/Snake_case) is used and maintained throughout. The following
-informations are available under the `dev` schema (todo: documentation):
+developers, as per previous convention [*snake_case*](https://en.wikipedia.org/wiki/Snake_case) is used and maintained throughout. The `dev` schema
+is synonymous to all products and is maintained in the `dgms` repository for control.
+
+The following informations are available under the `dev` schema (todo: documentation):
 
 ### Stored Procedure(s)
 
